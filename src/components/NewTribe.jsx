@@ -54,18 +54,18 @@ function NewTribe() {
               type="text"
               value={tribeName}
               placeholder="name your tribe"
-              className="w-full sm:w-auto sofatext"
+              className="w-full sm:w-auto sofatext ml-1"
               onChange={(event) => setTribeName(event.target.value)}
             />
           </div>
           <div className="mb-2 sm:ml-4">
-            <label htmlFor="energy">Energy:</label>
+            <label htmlFor="energy">Motto:</label>
             <input
               id="energy"
               type="text"
               value={energy}
-              placeholder="your energy (optional)"
-              className="w-full sm:w-auto sofatext"
+              placeholder="your motto (optional)"
+              className="w-full sm:w-auto sofatext ml-1"
               onChange={(event) => setEnergy(event.target.value)}
             />
           </div>
@@ -81,7 +81,11 @@ function NewTribe() {
             
           </div>
          <button onClick={handleSubmit} className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full shadow-md">
-         <Link to='/tribes/'>Submit SHEET</Link>
+         <Link to='/tribes/'>
+          
+          Submit SHEET
+          
+          </Link>
           </button>
 
         </div>

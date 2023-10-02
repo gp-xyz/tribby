@@ -4,9 +4,7 @@
 
 body {
   @apply font-sans text-2xl antialiased text-pink-200;
-  background-image: url('./tropics.jpg');
-  background-size: cover;
-  background-position: top center;
+  background-color: #030303;
 }
 .image-container {
   position: relative;
@@ -44,23 +42,23 @@ body {
 
 
 .text-gabe{
-  @apply text-yellow-100;
+  @apply text-slate-900;
 }
 
 .bubblebox{
-  @apply rounded-3xl text-gabe bg-slate-300 m-6 p-3 min-w-fit bg-opacity-50;
+  @apply rounded-3xl text-gabe bg-gray-100 m-6 p-3 min-w-fit;
 }
 
 
 .lilbubble{
-  @apply rounded text-gabe  bg-slate-400 m-3 p-3 min-w-fit bg-opacity-90;
+  @apply rounded text-gabe  bg-gray-50 m-3 p-3 min-w-fit;
 }
 .lilgrid{
-  @apply rounded-sm bg-slate-400 m-1 p-1 min-w-fit bg-opacity-90;
+  @apply rounded-sm bg-slate-400 m-1 p-1 min-w-fit;
 }
 
 .nav-link {
-  @apply  text-green-100 block py-2 px-4 text-center transition-colors duration-200 bg-orange-300 bg-opacity-70;
+  @apply  text-pink-300 block py-2 px-4 text-center transition-colors duration-200 bg-black bg-opacity-90;
 }
 
 .nav-link:hover {
@@ -70,15 +68,15 @@ body {
   @apply border text-black border-gray-400 rounded-md px-3 py-2 focus:outline-none focus:border-blue-500;
 }
 .sofaheader{
-  @apply text-5xl font-semibold p-5 text-slate-50;
+  @apply text-5xl font-semibold p-5 text-pink-600;
 }
 
 
 
 .pickreg {
-  @apply border-2 border-gray-300 rounded-lg bg-purple-700 bg-opacity-20 hover:drop-shadow-lg hover:cursor-pointer;
+  @apply border-2 border-gray-300 rounded-lg bg-pink-700 bg-opacity-20 hover:drop-shadow-lg hover:cursor-pointer;
 }
 
 .picked{
-  @apply border-2 font-semibold rounded-lg hover:cursor-pointer border-orange-500 bg-orange-500 hover:border-purple-600 ;
+  @apply border-2 font-semibold rounded-lg hover:cursor-pointer border-blue-500 bg-pink-500 hover:border-purple-600 ;
 }
