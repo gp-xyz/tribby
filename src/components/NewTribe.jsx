@@ -8,25 +8,29 @@ function NewTribe() {
   const [tribeName, setTribeName] = useState('');
   const [energy, setEnergy] = useState('');
   const [picked, setPicked] = useState([]);
+  const [isSubmitted, setIsSubmitted] = useState(false); // new state variable
+
   useEffect(() => {
     fetch(`${config.serverName}/contestants`)
       .then(response => response.json())
       .then(data => setContestants(data));
   }, []);
 
-
   function handleSubmit(event) {
     event.preventDefault();
 
     const outData = { 'tribename': tribeName, energy: energy, picked: picked }
-    fetch(`${config.serverName}/submit`,
-      {
-        method: 'POST',
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(outData)
-      })
+    fetch(`${config.serverName}/submit`, {
+      method: 'POST',
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(outData)
+    })
+    .then(() => setIsSubmitted(true)) // setting isSubmitted to true after submit is successful
+    .catch(err => console.error("Submit Error: ", err));
+    
     console.log(outData)
   }
+
 
   function NTCallback(event) {
     console.log(event);
@@ -76,17 +80,19 @@ function NewTribe() {
           <div className='grid grid-rows-3 bg-orange-500 p-1 m-1 bg-opacity-20'>
 
             <span>Your Tribe Name: {tribeName}</span>
-            <span>Your Energy: {energy}</span>
+            <span>Your Motto: {energy}</span>
             <span>Picked Contestants: {getNames()} </span>
             
           </div>
-         <button onClick={handleSubmit} className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full shadow-md">
-         <Link to='/tribes/'>
-          
-          Submit SHEET
-          
-          </Link>
+          {!isSubmitted ? (
+          <button onClick={handleSubmit} className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full shadow-md">
+            Submit SHEET
           </button>
+        ) : (
+          <div>
+             <Link className='nav-link' to='/tribes/'>Submitted. Here is a link to the tribes</Link>
+          </div>
+        )}
 
         </div>
     </div>
