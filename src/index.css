@@ -1,3 +1,84 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply font-sans text-2xl antialiased text-pink-200;
+  background-image: url('./tropics.jpg');
+  background-size: cover;
+  background-position: top center;
+}
+.image-container {
+  position: relative;
+}
+
+.image-container img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 0, 0, 0.3);
+}
+
+.overlay:before, .overlay:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  background-color: red;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.overlay:after {
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+
+.text-gabe{
+  @apply text-yellow-100;
+}
+
+.bubblebox{
+  @apply rounded-3xl text-gabe bg-slate-300 m-6 p-3 min-w-fit bg-opacity-50;
+}
+
+
+.lilbubble{
+  @apply rounded text-gabe  bg-slate-400 m-3 p-3 min-w-fit bg-opacity-90;
+}
+.lilgrid{
+  @apply rounded-sm bg-slate-400 m-1 p-1 min-w-fit bg-opacity-90;
+}
+
+.nav-link {
+  @apply  text-green-100 block py-2 px-4 text-center transition-colors duration-200 bg-orange-300 bg-opacity-70;
+}
+
+.nav-link:hover {
+  @apply bg-cyan-100 text-purple-400;
+}
+.sofatext{
+  @apply border text-black border-gray-400 rounded-md px-3 py-2 focus:outline-none focus:border-blue-500;
+}
+.sofaheader{
+  @apply text-5xl font-semibold p-5 text-slate-50;
+}
+
+
+
+.pickreg {
+  @apply border-2 border-gray-300 rounded-lg bg-purple-700 bg-opacity-20 hover:drop-shadow-lg hover:cursor-pointer;
+}
+
+.picked{
+  @apply border-2 font-semibold rounded-lg hover:cursor-pointer border-orange-500 bg-orange-500 hover:border-purple-600 ;
+}
