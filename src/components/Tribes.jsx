@@ -9,7 +9,7 @@ function Tribes() {
 
 
   const [tribes, setTribes] = useState([]);
-  const [listview, setListView] = useState(false);
+  const [listview, setListView] = useState(true);
   const [colorobj, setColorobj] = useState(colors);
   const [deadlist, setDeadList] = useState([])
 
