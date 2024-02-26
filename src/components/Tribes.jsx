@@ -97,7 +97,7 @@ function Tribes() {
         <ul>
           {tribes.map((tribe, index) => (
             <li key={index} className='lilbubble max-h-50'>
-              <div className='grid grid-cols-1 md:grid-cols-2 inline-block align-middle'>
+              <div className='grid grid-cols-1 md:grid-cols-2  align-middle'>
                 <div>
                   <strong>{tribe.tribename}</strong> - {tribe.catchphrase}
                   <br />

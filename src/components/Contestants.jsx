@@ -14,6 +14,7 @@ function Contestants() {
     <div className='bubblebox'>
       <h2 className=''>Contestants:</h2>
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-6 gap-1">
+        {stats && stats.length === 0 ? <div className='w-full h-64 animate-pulse'>Loading...</div> : null}
         {stats.map((person, index) => (
           <div key={index} className='lilbubble'>
             <div className="image-container">

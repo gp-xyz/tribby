@@ -58,25 +58,25 @@ body {
 }
 
 .nav-link {
-  @apply  text-pink-300 block py-2 px-4 text-center transition-colors duration-200 bg-black bg-opacity-90;
+  @apply  text-orange-300 block py-2 px-4 text-center transition-colors duration-200 bg-black bg-opacity-90;
 }
 
 .nav-link:hover {
-  @apply bg-cyan-100 text-purple-400;
+  @apply bg-orange-400 text-green-500;
 }
 .sofatext{
   @apply border text-black border-gray-400 rounded-md px-3 py-2 focus:outline-none focus:border-blue-500;
 }
 .sofaheader{
-  @apply text-5xl font-semibold p-5 text-pink-600;
+  @apply text-5xl font-semibold p-5 text-orange-600;
 }
 
 
 
 .pickreg {
-  @apply border-2 border-gray-300 rounded-lg bg-pink-700 bg-opacity-20 hover:drop-shadow-lg hover:cursor-pointer;
+  @apply border-2 border-gray-300 rounded-lg bg-orange-700 bg-opacity-20 hover:drop-shadow-lg hover:cursor-pointer;
 }
 
 .picked{
-  @apply border-2 font-semibold rounded-lg hover:cursor-pointer border-blue-500 bg-pink-500 hover:border-purple-600 ;
+  @apply border-2 font-semibold rounded-lg hover:cursor-pointer border-blue-500 bg-orange-500 hover:border-purple-600 ;
 }

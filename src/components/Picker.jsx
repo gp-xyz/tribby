@@ -29,6 +29,7 @@ function Picker(props) {
     <div className='lilbubble'>
       <h2>Pick 3 contestants:</h2>
       <div className="grid grid-cols-3 gap-4 md:grid-cols-6 xl:grid-cols-9">
+        {props && props.contestants && props.contestants.length === 0 ? <div className='w-full h-64 animate-pulse'>Loading...</div> : null}
         {props.contestants.map((contestant) => (
           <div
             key={contestant.id}
