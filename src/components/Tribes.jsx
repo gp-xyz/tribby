@@ -75,7 +75,7 @@ function Tribes() {
         <div className='bg-slate-400 rounded-sm p-4 grid grid-cols-1'>
           {tribes.length ? (tribes.map((tribe, index) => (
 
-            <div className='grid grid-cols-2 md:grid-cols-5'>
+            <div className='grid grid-cols-2 md:grid-cols-5 items-center'>
               <div className='col-span-2 underline md:no-underline'><span className='p-2 text-white drop-shadow-md '>({tribe.total})</span>{tribe.tribename}</div>
 
               {[tribe.pick1, tribe.pick2, tribe.pick3].map((item, index) => {
