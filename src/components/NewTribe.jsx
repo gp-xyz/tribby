@@ -52,7 +52,7 @@ function NewTribe() {
 
         <div className="lilbubble flex flex-col sm:flex-row sm:items-center">
           <div className="mb-2 sm:mr-4">
-            <label htmlFor="tribe-name">Tribe Name:</label>
+            <label htmlFor="tribe-name">Tribe:</label>
             <input
               id="tribe-name"
               type="text"
@@ -63,12 +63,12 @@ function NewTribe() {
             />
           </div>
           <div className="mb-2 sm:ml-4">
-            <label htmlFor="energy">Motto:</label>
+            <label htmlFor="energy">Vibe:</label>
             <input
               id="energy"
               type="text"
               value={energy}
-              placeholder="your motto (optional)"
+              placeholder="🏝️ ☀️ yolo"
               className="w-full sm:w-auto sofatext ml-1"
               onChange={(event) => setEnergy(event.target.value)}
             />
@@ -80,7 +80,7 @@ function NewTribe() {
           <div className='grid grid-rows-3 bg-orange-500 p-1 m-1 bg-opacity-20'>
 
             <span>Your Tribe Name: {tribeName}</span>
-            <span>Your Motto: {energy}</span>
+            <span>Your Vibe: {energy}</span>
             <span>Picked Contestants: {getNames()} </span>
             
           </div>
