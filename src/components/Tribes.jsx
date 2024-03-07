@@ -72,12 +72,15 @@ function Tribes() {
       </h2>
 
       {listview ? (
-        <div className='bg-slate-400 rounded-sm p-4 grid grid-cols-1'>
+        <div className='bg-slate-400 rounded-sm p-1 grid grid-cols-1 font-sm sm:font-md'>
           {tribes.length ? (tribes.map((tribe, index) => (
 
-            <div className='grid grid-cols-2 md:grid-cols-5 items-center'>
-              <div className='col-span-2 underline md:no-underline'><span className='p-2 text-white drop-shadow-md '>({tribe.total})</span>{tribe.tribename}</div>
-
+            <div className='grid grid-cols-2 md:grid-cols-5 items-center px-1 ml-1 border-l-4 border-r-4 border-slate-300 mb-1' key={index}>
+              <div className='grid grid-rows-2 items-start col-span-full md:col-span-2'>
+                <div className='col-span-2 underline md:no-underline'><span className='mr-2 text-white drop-shadow-md '>({tribe.total})</span>{tribe.tribename}</div>
+                <div className='col-span-full italic'>{tribe.catchphrase}</div>
+              </div>
+            <div className='flex flex-row items-center col-span-2 md:col-span-3'>
               {[tribe.pick1, tribe.pick2, tribe.pick3].map((item, index) => {
                 const isDead = deadlist.includes(item);
                 return (
@@ -86,7 +89,7 @@ function Tribes() {
                   </div>
                 );
               })}
-
+            </div>
 
 
             </div>
@@ -106,19 +109,20 @@ function Tribes() {
 
                 <div className='grid grid-cols-3 border-yellow-300 border-4 p-1'>
                   {[tribe.pick1, tribe.pick2, tribe.pick3].map((pick, index) => {
-                    const isDead = deadlist.includes(tribe['pick' + (index + 1) ])
+                    const isDead = deadlist.includes(tribe['pick' + (index + 1)])
                     return (
-                    <div className='image-container' key={index}>
-                      <img
-                        className='w-full h-auto'
-                        src={'/images/' + pick + '.jpg'}
-                        alt={pick}
-                      />
-                      { isDead && (
-                        <div className='overlay'></div>
-                      )}
-                    </div>
-                  )})}
+                      <div className='image-container' key={index}>
+                        <img
+                          className='w-full h-auto'
+                          src={'/images/' + pick + '.jpg'}
+                          alt={pick}
+                        />
+                        {isDead && (
+                          <div className='overlay'></div>
+                        )}
+                      </div>
+                    )
+                  })}
                 </div>
 
               </div>

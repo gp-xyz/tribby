@@ -17,7 +17,7 @@ function Home() {
         ))}
       </ul> */}
       
-      <div className='sofaheader lilbubble'> Registration OPEN for Survivor 46, starting Feb 28, 2024</div>
+      <div className='sofaheader lilbubble'> Registration CLOSED for Survivor 46, starting Feb 28, 2024</div>
 
 
       
@@ -31,8 +31,8 @@ function Home() {
         <div className='pl-2 pb-2'>*If you need to modify your entry before the deadline, just make a new tribe. I will manually delete 'unwanted' tribes based on which entries are paid for.</div>
       </div>
 
-      <div className='pl-3 w-full'><Link to='/new' className='bg-green-500 text-white p-4 w-full drop-shadow-lg hover:bg-blue-600' >ENTER A Tribe &rarr;&rarr;</Link>
-      </div>
+      {/* <div className='pl-3 w-full'><Link to='/new' className='bg-green-500 text-white p-4 w-full drop-shadow-lg hover:bg-blue-600' >ENTER A Tribe &rarr;&rarr;</Link>
+      </div> */}
     </div>
   );
 }
